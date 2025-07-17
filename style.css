@@ -86,7 +86,7 @@ body {
     width: 20px; /* Увеличим размер чекбокса для удобства */
     height: 20px;
     cursor: pointer;
-	accent-color: #dc3545;
+	accent-color: #652dc4;
 }
 
 .menu-item label {
