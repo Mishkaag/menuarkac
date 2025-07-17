@@ -1,11 +1,11 @@
 const CACHE_NAME = 'menubahar-cache-v2';
 const urlsToCache = [
-  '/menubahar/',
-  '/menubahar/index.html',
-  '/menubahar/style.css',
-  '/menubahar/script.js',
-  '/menubahar/icons/icon-192x192.png',
-  '/menubahar/icons/icon-512x512.png'
+  '/menuarkac/',
+  '/menuarkac/index.html',
+  '/menuarkac/style.css',
+  '/menuarkac/script.js',
+  '/menuarkac/icons/icon-192x192.png',
+  '/menuarkac/icons/icon-512x512.png'
   // Добавьте сюда все ресурсы, которые вы хотите кэшировать
 ];
 
