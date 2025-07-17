@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <link rel="manifest" href="/menubahar/manifest.json">
+  <meta name="theme-color" content="#252e4d"> 
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/menubahar/sw.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bahar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="header-label">Стоимость с человека</span>
+            <span class="total-price">0 манат</span>
+        </div>
+        <div class="menu-grid">
+            </div>
+    </div>
+    <script src="script.js?v=2.1"></script>  
+</body>
+</html>
