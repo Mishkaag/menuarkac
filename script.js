@@ -107,27 +107,27 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'ГОРЯЧИЕ БЛЮДА',
             dishes: [
                 { name: 'Дограма из баранины', price: 35, checked: false },
-                { name: 'Куриное соте с овощами с булгуром', price: 50, checked: false },
-                { name: 'Ярма из говядины', price: 15, checked: false },
                 { name: 'Жаркое в горшочке', price: 55, checked: false },
-                { name: 'Плов из говядины', price: 45, checked: false },
+                { name: 'Ярма из говядины', price: 15, checked: false },
                 { name: 'Биф с картофелем', price: 65, checked: false },
-                { name: 'Узбекский плов', price: 50, checked: false },
+                { name: 'Плов из говядины', price: 45, checked: false },
                 { name: 'Говяжий рулет с булгуром', price: 80, checked: false },
-                { name: 'Соус из говядины', price: 48, checked: false },
+                { name: 'Узбекский плов', price: 50, checked: false },
                 { name: 'Голень ягненка с диким рисом', price: 75, checked: false },
-                { name: 'Нохут чорба из говядины', price: 50, checked: false },
+                { name: 'Соус из говядины', price: 48, checked: false },
                 { name: 'Медальоны с запеканкой', price: 80, checked: false },
-                { name: 'Нохут чорба с бараниной', price: 55, checked: false },
+                { name: 'Нохут чорба из говядины', price: 50, checked: false },
                 { name: 'Осетрина с кускусом', price: 160, checked: false },
-                { name: 'Чектирме из баранины', price: 55, checked: false },
+                { name: 'Нохут чорба с бараниной', price: 55, checked: false },
                 { name: 'Судак с диким рисом', price: 90, checked: false },
-                { name: 'Рисовая каша', price: 15, checked: false },
+                { name: 'Чектирме из баранины', price: 55, checked: false },
                 { name: 'Говяжий рулет с булгуром (общая)', price: 85, checked: false },
-                { name: 'Манты рулет', price: 25, checked: false },
+                { name: 'Рисовая каша', price: 15, checked: false },
                 { name: 'Куриный рулет с булгуром', price: 45, checked: false },
-                { name: 'Манты с мясом', price: 30, checked: false },
+                { name: 'Манты рулет', price: 25, checked: false },
                 { name: 'Жаркое по-домашнему (общая)', price: 55, checked: false },
+                { name: 'Манты с мясом', price: 30, checked: false },
+                { name: 'Тушенное мясо + картофель (общая)', price: 55, checked: false },
                 { name: 'Манты (мясо с тыквой)', price: 25, checked: false },
                 { name: 'Какмач с картофелем (общая)', price: 60, checked: false },
                 { name: 'Манты ассорти 3 вида', price: 22, checked: false },
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Шашлыки 4 вида', price: 95, checked: false },
                 { name: 'Курица в соевом соусе с рисом по-турецки', price: 55, checked: false },
                 { name: 'Мангал микс "Бахар"', price: 110, checked: false },
-                { name: 'Курица в соевом соусе с рисом по-турецки', price: 55, checked: false },
+                { name: 'Куриное соте с овощами с булгуром', price: 50, checked: false },
                 { name: 'Мангал микс "Аркач"', price: 125, checked: false }
             ]
         }
@@ -208,5 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Изначально обновляем сумму при загрузке страницы
     updateTotalPrice();
 });
+
 
 
