@@ -157,29 +157,29 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         }
     ];
-    const menuContainer = document.querySelector('.menu-grid'); // Переименовал, чтобы было яснее
+    const menuContainer = document.querySelector('.menu-grid');
     const totalPriceElement = document.querySelector('.total-price');
 
-    // Функция для обновления общей суммы
+    // Пересчёт общей суммы
     function updateTotalPrice() {
         let total = 0;
         document.querySelectorAll('.menu-item input[type="checkbox"]:checked').forEach(checkbox => {
-            total += parseFloat(checkbox.dataset.price || 0);
+            const btn = checkbox.closest('.menu-item').querySelector('.half-btn');
+            const basePrice = parseFloat(checkbox.dataset.price);
+            total += btn && btn.classList.contains('active') ? basePrice / 2 : basePrice;
         });
         totalPriceElement.textContent = `${total} манат`;
     }
 
-    // Создание элементов меню на основе данных
+    // Создание интерфейса
     menuCategories.forEach(category => {
-        // Создаем заголовок категории
         const categoryTitle = document.createElement('div');
         categoryTitle.classList.add('category-title');
         categoryTitle.textContent = category.title;
         menuContainer.appendChild(categoryTitle);
 
-        // Создаем сетку для блюд в этой категории
         const dishGrid = document.createElement('div');
-        dishGrid.classList.add('menu-grid-inner'); // Новый класс для внутренней сетки
+        dishGrid.classList.add('menu-grid-inner');
         menuContainer.appendChild(dishGrid);
 
         category.dishes.forEach((dish, index) => {
@@ -188,24 +188,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            // Используем уникальный ID, комбинируя название категории и индекс
             checkbox.id = `dish-${category.title.replace(/\s/g, '-')}-${index}`;
-            checkbox.checked = dish.checked;
             checkbox.dataset.price = dish.price;
+            checkbox.checked = dish.checked;
 
             const label = document.createElement('label');
-            label.htmlFor = checkbox.id; // Связываем label с checkbox по ID
+            label.htmlFor = checkbox.id;
             label.textContent = dish.name;
+
+            const halfBtn = document.createElement('button');
+            halfBtn.textContent = '½';
+            halfBtn.classList.add('half-btn');
+
+            // Обработка выбора блюда
+            checkbox.addEventListener('change', () => {
+                if (checkbox.checked) {
+                    halfBtn.style.display = 'inline-block';
+                } else {
+                    halfBtn.style.display = 'none';
+                    halfBtn.classList.remove('active');
+                }
+                updateTotalPrice();
+            });
+
+            // Обработка нажатия на кнопку ½
+            halfBtn.addEventListener('click', () => {
+                halfBtn.classList.toggle('active');
+                updateTotalPrice();
+            });
 
             menuItem.appendChild(checkbox);
             menuItem.appendChild(label);
-            dishGrid.appendChild(menuItem); // Добавляем в внутреннюю сетку
-
-            checkbox.addEventListener('change', updateTotalPrice);
+            menuItem.appendChild(halfBtn);
+            dishGrid.appendChild(menuItem);
         });
     });
 
-    // Изначально обновляем сумму при загрузке страницы
     updateTotalPrice();
 });
 
