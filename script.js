@@ -201,9 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
             label.textContent = dish.name;
 
             if (dish.disabled) {
-                label.style.opacity = '0.5';
-                label.style.textDecoration = 'line-through';
-                label.title = 'Блюдо недоступно';
+                checkbox.disabled = true;
+                label.title = 'Блюдо временно недоступно';
                 }
 
             // Создаём кнопку только если блюдо поддерживает ½
@@ -242,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTotalPrice();
 });
+
 
 
 
