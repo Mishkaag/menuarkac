@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let halfBtn = null;
             if (dish.half) {
                 halfBtn = document.createElement('button');
-                halfBtn.textContent = '½';
+                halfBtn.textContent = '0,5';
                 halfBtn.classList.add('half-btn');
             }
 
@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTotalPrice();
 });
+
 
 
 
