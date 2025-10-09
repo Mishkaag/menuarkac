@@ -118,5 +118,11 @@ body {
 }
 
 .menu-item input[disabled] + label {
+    opacity: 0.5;
     cursor: not-allowed;
 }
+
+.menu-item input[disabled] + label {
+    cursor: not-allowed;
+}
+
