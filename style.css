@@ -116,3 +116,7 @@ body {
     color: white;
     border-color: #d93636;
 }
+
+.menu-item input[disabled] + label {
+    cursor: not-allowed;
+}
