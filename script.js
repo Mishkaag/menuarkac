@@ -192,9 +192,19 @@ document.addEventListener('DOMContentLoaded', () => {
             checkbox.dataset.price = dish.price;
             checkbox.checked = dish.checked;
 
+            if (dish.disabled) {
+                checkbox.disabled = true;
+                }
+
             const label = document.createElement('label');
             label.htmlFor = checkbox.id;
             label.textContent = dish.name;
+
+            if (dish.disabled) {
+                label.style.opacity = '0.5';
+                label.style.textDecoration = 'line-through';
+                label.title = 'Блюдо недоступно';
+                }
 
             // Создаём кнопку только если блюдо поддерживает ½
             let halfBtn = null;
@@ -232,6 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTotalPrice();
 });
+
 
 
 
