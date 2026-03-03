@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Суши сет', price: 35, checked: false, half: false },
                 { name: 'Мясное ассорти "VIP"', price: 65, checked: false, half: true },
                 { name: 'Рыбное ассорти "VIP"', price: 130, checked: false, half: true },
-                { name: 'Мясное/Сырное ассорти', price: 60, checked: false, half: true },
+                { name: 'Мясное/Сырное ассорти', price: 50, checked: false, half: true },
                 { name: 'Блинчики с красной икрой', price: 65, checked: false, half: true },
                 { name: 'Копченое ассорти "VIP"', price: 70, checked: false, half: true },
                 { name: 'Волованы с красной икрой', price: 65, checked: false, half: true },
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Глясе', price: 30, checked: false, half: false },
                 { name: 'Мини фитчи', price: 12, checked: false, half: false },
                 { name: 'Лимонады в графине', price: 18, checked: false, half: false },
-                { name: 'Блинчики ассорти', price: 16, checked: false, half: true },
+                { name: 'Блинчики ассорти', price: 20, checked: false, half: true },
                 { name: 'Напитки ассорти', price: 27, checked: false, half: false },
                 { name: 'Нагетсы микс + фри', price: 32, checked: false, half: true },
                 { name: 'Напитки (безлимит)', price: 35, checked: false, half: false },
@@ -145,13 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Куриная грудка с овощами с рисом по-турецки', price: 60, checked: false, half: false },
                 { name: 'Мясной микс на доске', price: 110, checked: false, half: true },
                 { name: 'Курица в слив.соусе с рисом по-турецки', price: 55, checked: false, half: false },
-                { name: 'Микс гриль на доске', price: 110, checked: false, half: true },
-                { name: 'Куриное фрикасе с арпой', price: 50, checked: false, half: false },
                 { name: 'Шашлыки 3 вида', price: 75, checked: false, half: true },
-                { name: 'Куриный рулет с рисом', price: 50, checked: false, half: false },
+                { name: 'Куриное фрикасе с арпой', price: 50, checked: false, half: false },
                 { name: 'Шашлыки 4 вида', price: 95, checked: false, half: true },
+                { name: 'Куриный рулет с рисом', price: 50, checked: false, half: false },
+                { name: 'Мангал микс 5 видов', price: 75, checked: false, half: false },
                 { name: 'Курица в соевом соусе с рисом по-турецки', price: 55, checked: false, half: false },
-                { name: 'Мангал микс "Бахар"', price: 105, checked: false, half: false },
+                { name: 'Мангал микс "Бахар"', price: 100, checked: false, half: false },
                 { name: 'Куриное соте с овощами с булгуром', price: 50, checked: false, half: false },
                 { name: 'Мангал микс "Аркач"', price: 120, checked: false, half: false }
             ]
@@ -241,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTotalPrice();
 });
+
 
 
 
