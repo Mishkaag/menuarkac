@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Винегрет', price: 7, checked: false, half: true },
                 { name: 'Мясной в соевом соусе', price: 24, checked: false, half: true },
                 { name: 'Хрустящий баклажан', price: 10, checked: false, half: true },
-                { name: 'Теплый с говядиной', price: 18, checked: false, half: true },
+                { name: 'Теплый с говядиной', price: 20, checked: false, half: true },
                 { name: 'Салат с копченой ветчиной', price: 14, checked: false, half: true },
                 { name: 'Салат с ростбифом', price: 24, checked: false, half: true },
                 { name: 'Цезарь с курицей', price: 16, checked: false, half: true },
@@ -241,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateTotalPrice();
 });
+
 
 
 
